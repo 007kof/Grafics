@@ -5,11 +5,13 @@ layout(triangle_strip, max_vertices = 36) out;
 
 in vec3 vNormal[];
 out vec3 gNormal;
+out vec3 gPos;
 
-uniform float d = 0.5;
+uniform float d = 0.1;
 uniform mat4 modelViewProjectionMatrix;
 
 void draw_vertex(vec3 V, vec3 N) {
+    gPos = V;
     gNormal = N;
     gl_Position = modelViewProjectionMatrix * vec4(V, 1);
     EmitVertex();
@@ -21,11 +23,11 @@ void draw_figure(vec3 V[6], vec3 N) {
     draw_vertex(V[1], -N);
     draw_vertex(V[2], -N);
     EndPrimitive();
-    // Top Face
+    /*// Top Face
     draw_vertex(V[3], N);
     draw_vertex(V[4], N);
     draw_vertex(V[5], N);
-    EndPrimitive();
+    EndPrimitive();*/
     // Lateral Face 1
     vec3 a = V[1] - V[0];
     vec3 b = V[3] - V[0];
