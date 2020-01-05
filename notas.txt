@@ -1,0 +1,14 @@
+VS+GS+FS:
+Para calcular el baricentro de un triangulo, dado los puntos V0, V1, V2:
+ - vec3 Baricentro = (V0+V1+V2)/3;
+Para calcular el vector normal de una cara, dado los puntos V0, V1, V2:
+ - vec3 a = V1 - V0;
+ - vec3 b = V2 - V0;
+ - vec3 Normal = cross(a,b)/length(cross(a,b));
+
+Plugins:
+ - Effect plugin: Plugin que implementa los metodos preFrame() i/o postFrame(), sirve para activar los shaders, configurar texturas, alpha blending, etc.
+ - Draw plugin: Plugin que implementa los metodos drawScene(), sirve para dibujar los VAO.
+ - Action plugin: Plugin que implementa los metodos de entrada como keyPressEvent(), sirve para tractar los eventos externos.
+ - Render plugin: Plugin que implementa el metodo paintGL(), sirve para dibujar multiples pasos de rendering.
+
