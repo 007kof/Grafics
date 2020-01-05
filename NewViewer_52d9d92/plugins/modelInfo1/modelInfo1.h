@@ -3,7 +3,7 @@
 
 #include "plugin.h" 
 
-class Modelinfo1: public QObject, public Plugin
+class ModelInfo1: public QObject, public Plugin
 {
 	Q_OBJECT
 	Q_PLUGIN_METADATA(IID "Plugin") 
@@ -12,7 +12,7 @@ class Modelinfo1: public QObject, public Plugin
   public:
     void postFrame();
   private:
-    void printModelInfo(); 
+    void printModelInfo1(); 
 	// add private methods and attributes here
 };
 

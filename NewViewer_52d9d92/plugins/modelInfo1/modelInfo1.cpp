@@ -1,7 +1,7 @@
-#include "modelinfo1.h"
+#include "modelInfo1.h"
 #include "glwidget.h"
 
-void Modelinfo1::printModelInfo() {
+void ModelInfo1::printModelInfo1() {
     Scene* sc = scene();
     vector<Object> obj = sc->objects();
     int num_obj, num_pol, num_vert, num_tri;
@@ -22,7 +22,7 @@ void Modelinfo1::printModelInfo() {
     cout << "Percentatge of triangles: " << percent_tri << "%" << endl;
 }
 
-void Modelinfo1::postFrame()
+void ModelInfo1::postFrame()
 {
-	printModelInfo();
+	printModelInfo1();
 }
