@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = pluginloader1.0.0
-DISTDIR = /home/ji/Escritorio/NewViewer_52d9d92/plugins/pluginLoader/build/pluginloader1.0.0
+DISTDIR = /home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/pluginLoader/build/pluginloader1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/opt/Qt/5.12.6/gcc_64/lib -shared
 LIBS          = $(SUBLIBS) -lGL /opt/Qt/5.12.6/gcc_64/lib/libQt5OpenGL.so /opt/Qt/5.12.6/gcc_64/lib/libQt5Widgets.so /opt/Qt/5.12.6/gcc_64/lib/libQt5Gui.so /opt/Qt/5.12.6/gcc_64/lib/libQt5Core.so -lpthread   
@@ -870,7 +870,7 @@ build/moc_pluginLoader.cpp: pluginLoader.h \
 		/opt/Qt/5.12.6/gcc_64/include/QtCore/qdatetime.h \
 		build/moc_predefs.h \
 		/opt/Qt/5.12.6/gcc_64/bin/moc
-	/opt/Qt/5.12.6/gcc_64/bin/moc $(DEFINES) --include /home/ji/Escritorio/NewViewer_52d9d92/plugins/pluginLoader/build/moc_predefs.h -I/opt/Qt/5.12.6/gcc_64/mkspecs/linux-g++ -I/home/ji/Escritorio/NewViewer_52d9d92/plugins/pluginLoader -I/home/ji/Escritorio/NewViewer_52d9d92/plugins/pluginLoader/include -I/home/ji/Escritorio/NewViewer_52d9d92/viewer/glwidget/include -I/home/ji/Escritorio/NewViewer_52d9d92/viewer/interfaces -I/home/ji/Escritorio/NewViewer_52d9d92/viewer/core/include -I/usr/include/libdrm -I/opt/Qt/5.12.6/gcc_64/include -I/opt/Qt/5.12.6/gcc_64/include/QtOpenGL -I/opt/Qt/5.12.6/gcc_64/include/QtWidgets -I/opt/Qt/5.12.6/gcc_64/include/QtGui -I/opt/Qt/5.12.6/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include pluginLoader.h -o build/moc_pluginLoader.cpp
+	/opt/Qt/5.12.6/gcc_64/bin/moc $(DEFINES) --include /home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/pluginLoader/build/moc_predefs.h -I/opt/Qt/5.12.6/gcc_64/mkspecs/linux-g++ -I/home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/pluginLoader -I/home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/pluginLoader/include -I/home/ji/Escritorio/Grafics/NewViewer_52d9d92/viewer/glwidget/include -I/home/ji/Escritorio/Grafics/NewViewer_52d9d92/viewer/interfaces -I/home/ji/Escritorio/Grafics/NewViewer_52d9d92/viewer/core/include -I/usr/include/libdrm -I/opt/Qt/5.12.6/gcc_64/include -I/opt/Qt/5.12.6/gcc_64/include/QtOpenGL -I/opt/Qt/5.12.6/gcc_64/include/QtWidgets -I/opt/Qt/5.12.6/gcc_64/include/QtGui -I/opt/Qt/5.12.6/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include pluginLoader.h -o build/moc_pluginLoader.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1087,13 +1087,13 @@ build/moc_pluginLoader.o: build/moc_pluginLoader.cpp
 ####### Install
 
 install_target: all FORCE
-	@test -d $(INSTALL_ROOT)/home/ji/Escritorio/NewViewer_52d9d92/plugins/pluginLoader/../bin/plugins || mkdir -p $(INSTALL_ROOT)/home/ji/Escritorio/NewViewer_52d9d92/plugins/pluginLoader/../bin/plugins
-	-$(QINSTALL_PROGRAM) ../bin/$(TARGET) $(INSTALL_ROOT)/home/ji/Escritorio/NewViewer_52d9d92/plugins/bin/plugins/$(TARGET)
-	-$(STRIP) --strip-unneeded $(INSTALL_ROOT)/home/ji/Escritorio/NewViewer_52d9d92/plugins/bin/plugins/$(TARGET)
+	@test -d $(INSTALL_ROOT)/home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/pluginLoader/../bin/plugins || mkdir -p $(INSTALL_ROOT)/home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/pluginLoader/../bin/plugins
+	-$(QINSTALL_PROGRAM) ../bin/$(TARGET) $(INSTALL_ROOT)/home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/bin/plugins/$(TARGET)
+	-$(STRIP) --strip-unneeded $(INSTALL_ROOT)/home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/bin/plugins/$(TARGET)
 
 uninstall_target: FORCE
-	-$(DEL_FILE) $(INSTALL_ROOT)/home/ji/Escritorio/NewViewer_52d9d92/plugins/bin/plugins/$(TARGET)
-	-$(DEL_DIR) $(INSTALL_ROOT)/home/ji/Escritorio/NewViewer_52d9d92/plugins/pluginLoader/../bin/plugins/ 
+	-$(DEL_FILE) $(INSTALL_ROOT)/home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/bin/plugins/$(TARGET)
+	-$(DEL_DIR) $(INSTALL_ROOT)/home/ji/Escritorio/Grafics/NewViewer_52d9d92/plugins/pluginLoader/../bin/plugins/ 
 
 
 install: install_target  FORCE
