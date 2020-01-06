@@ -25,7 +25,7 @@ void AnimateVerticesPlugin::onPluginLoad()
 	vs = new QOpenGLShader(QOpenGLShader::Vertex, this);
 	vs->compileSourceCode(vs_src);
 	//vs->compileSourceFile(vs_path);
-	cout << "VS log" << vs->log().toStdString() << endl;
+	cout << "VS log:" << vs->log().toStdString() << endl;
 	QString fs_src =
 	"#version 330 core\n\n"
 	"in vec4 frontColor;\n"
@@ -37,7 +37,7 @@ void AnimateVerticesPlugin::onPluginLoad()
 	fs = new QOpenGLShader(QOpenGLShader::Fragment, this);
 	fs->compileSourceCode(fs_src);
 	//fs->compileSourceFile(fs_path);
-	cout << "FS log" << fs->log().toStdString() << endl;
+	cout << "FS log:" << fs->log().toStdString() << endl;
 	program = new QOpenGLShaderProgram(this);
 	program->addShader(vs);
 	program->addShader(fs);
